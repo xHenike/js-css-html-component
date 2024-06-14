@@ -10,6 +10,8 @@ for (const header of headers) {
 		const accordionItem = header.parentElement;
 		const accordionContent = accordionItem.querySelector(".accordion-content");
 
+		header.style.color = "black";
+
 		accordionContent.classList.toggle("active");
 
 		if (accordionContent.classList.contains("active")) {
@@ -17,6 +19,7 @@ for (const header of headers) {
 				accordionContent.scrollHeight + 100
 			}px`;
 		} else {
+			header.style.color = "gray";
 			accordionContent.style.maxHeight = "0";
 		}
 	});
@@ -78,7 +81,7 @@ saveView.addEventListener("click", () => {
 	for (const header of headers) {
 		const accordionItem = header.parentElement;
 		const accordionContent = accordionItem.querySelector(".accordion-content");
-
+		header.style.color = "gray";
 		accordionContent.classList.remove("active");
 	}
 	if (viewAllButton.innerHTML === "View less...") {
