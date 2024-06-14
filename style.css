@@ -157,6 +157,10 @@
     display: none;
 }
 
+.fa {
+    padding-right: 1%;
+}
+
 #greyFont {
     color: gray;
 }
